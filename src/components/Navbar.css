@@ -1,0 +1,128 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    position: sticky !important;
+    background-color: #fcfcfc;
+    top : 0;
+    height: 90px ;
+    z-index: 100;
+    width: 100%;
+}
+
+
+.navbar__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+.navbar__logo__first {
+    font-family: 'Dancing Script', cursive;
+    color: rgb(59, 59, 59);
+    font-size: 2.2rem;
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.774); 
+    box-shadow: 0px 3px 8px 0px rgba(68, 68, 68, 0.38);
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+
+}
+
+
+.navbar__linkList {
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    padding: 0 0.5rem;
+    color: rgb(119, 118, 118);
+    font-size: 1.3rem;
+
+}
+
+.navbar__linkList:hover {
+    cursor: pointer;
+    color: rgb(44, 44, 44);
+    background-color: rgba(201, 171, 171, 0.411);
+    border-radius: 5px;
+    transition: all 0.8s;
+}
+
+.navbar__black{
+    background-image: linear-gradient(90deg, #BA81FF 0%, #ff6a9479 90%);
+}
+
+
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    list-style: none;
+    margin:  0 5px;
+}
+.navbar__icon{
+    display: none;
+}
+
+@media screen and (max-width : 768px){
+    .navbar{
+        display: flex; 
+    }
+
+    .navbar__link {
+        display: none;
+    }
+
+    .navbar__link ul{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        text-align: center;
+        left: 0;
+        background-color: grey;
+        z-index: 11;
+        transform:translateX(100%);
+    }
+
+    .navbar__link li{
+        padding: 20px;
+    }
+
+    .navbar__linkToggle {
+        display: block !important;
+        position: absolute;
+        background-color: #CBC9F1;
+        width: 100%;
+        top: 90px;
+    }
+
+    .navbar__linkToggle  ul {
+        display: flex;
+        align-items: center ;
+        flex-direction: column;
+    }
+
+    .navbar__linkToggle li {
+        margin: 20px;
+        padding: 0.5rem 2rem;
+        color: rgb(56, 55, 55);
+    }
+    
+
+    .navbar__icon {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width : 380px){
+
+    .navbar__logo__first {
+        font-size: 1.5rem;
+    }
+
+    
+}
+
