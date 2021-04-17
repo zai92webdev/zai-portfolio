@@ -24,6 +24,11 @@
     box-shadow: 3px 10px 8px -3px rgba(15, 191, 214, 0.795);
     width: 280px;
     margin: 1rem auto;
+    transition: all .3s ease;
+}
+
+.about__nav > h1:hover{
+    transform: translateY(-10px);
 }
 
 .about__content {
@@ -69,6 +74,31 @@
         font-size: 1rem;
     }
     .about__content > span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width : 380px){
+    .about{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        min-height: 300px;
+    }
+    .about__nav > h1 {
+        font-size: 1rem;
+        width: 150px;
+    }
+    .about__content > p {
+        font-size: .8rem;
+        margin-bottom: 0;
+    }
+    .about__content > span {
+        font-size: .8rem;
+        margin-bottom: 0;
+    }
+
+    .about__content > h1 {
         font-size: 1rem;
     }
 }

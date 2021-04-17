@@ -21,6 +21,7 @@ function Cards({image,description,github,title,url}) {
         <Card>
             <CardActionArea>
                 <CardMedia 
+                    style={{borderBottom:'1px solid rgb(199, 199, 199, 0.534)'}}
                     component="img"
                     alt="jpg"
                     height="250"
@@ -29,10 +30,13 @@ function Cards({image,description,github,title,url}) {
                 />
 
                 <CardContent>
-                    <Typography variant='h5'>
+                    <Typography variant='h5' gutterBottom>
                         {title}
                     </Typography>
-                    <Typography>
+                    <Typography variant="button">
+                        Tech used :
+                    </Typography>
+                    <Typography variant="subtitle1">
                         {description}
                     </Typography>
                 </CardContent>

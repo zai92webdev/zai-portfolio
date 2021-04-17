@@ -21,8 +21,11 @@
     border-radius: 5px;
     -webkit-box-shadow: 3px 5px 31px -2px rgba(185, 61, 196, 0.808); 
     box-shadow: 3px 5px 31px -2px rgba(243, 88, 230, 0.795);
-
+    transition: all .3s ease;
 }
+.mywork__container > h1:hover{
+    transform: translateY(10px);
+} 
 
 .mywork__cards{
     padding: 2rem 7rem;
@@ -61,4 +64,30 @@
         padding-bottom: 2rem;
     }
     
+}
+
+@media screen and (max-width : 380px){
+    .mywork{
+        padding: 0;
+    }
+    .mywork__container {
+        padding-bottom: 1rem !important;
+    }
+    
+    .mywork__cards{
+        padding: .5rem;
+        grid-gap: .5rem ;
+    }
+
+    
+    .mywork__carousel {
+        padding: 0 1rem ;
+        padding-bottom: 2rem;
+    }
+    
+    .carousel-control-next, .carousel-control-prev {
+        width: 16px !important;
+        
+    }
+
 }

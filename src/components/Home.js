@@ -15,7 +15,7 @@ function Home() {
                     <span className='home__content__animate'>I</span>
                     <span className='home__content__animate'>'</span>
                     <span className='home__content__animate'>m</span>
-                    <span className='home__content__animate'> </span>
+                    <span > </span>
                     <span className='home__content__animate'>Z</span>
                     <span className='home__content__animate'>A</span>
                     <span className='home__content__animate'>I</span>

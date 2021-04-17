@@ -2,8 +2,29 @@
     max-width: 450px;
 }
 
-
-
-@media screen and (max-width : 768px){
-
+@media screen and (max-width : 450px){
+    .card .MuiTypography-h5{
+        font-size: 16px;
     }
+
+    .card .MuiTypography-button{
+        font-size: 12px;
+    }
+
+    .card .MuiTypography-subtitle1{
+        font-size: 12px;
+    }
+
+    .card .MuiCardMedia-media{
+        height: 150px;
+    }
+
+    .card .MuiCardMedia-img{
+        object-fit: contain;
+    }
+    
+}
+
+
+
+

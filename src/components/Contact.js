@@ -5,6 +5,8 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
+import Tooltip from '@material-ui/core/Tooltip';
+
 
 
 function Contact() {
@@ -17,36 +19,47 @@ function Contact() {
 
             <div className='contact__content'>
                 <div className='contact__logo'>
+                    
                     <div className='contact__icon'>
-                    <FacebookIcon />
+                        <Tooltip title='No Link Provided.' arrow>
+                            <FacebookIcon />
+                        </Tooltip>
+
                     </div>
 
                     <div className='contact__icon'>
-                        <TwitterIcon />
+                        <Tooltip title='No Link Provided.' arrow>
+                            <TwitterIcon />
+                        </Tooltip>
+                        
                     </div>
 
                     <div className='contact__icon'>
-                        <GitHubIcon />
+                        <Tooltip title='https://github.com/zai92webdev' arrow>
+                            <GitHubIcon />
+                        </Tooltip>
+                        
                     </div>
 
                     <div className='contact__icon'>
-                        <LinkedInIcon />
+                        <Tooltip title='No Link Provided.' arrow>
+                            <LinkedInIcon />
+                        </Tooltip>
+                        
                     </div>
 
                     <div className='contact__icon'>
-                        <EmailIcon />
+                        <Tooltip title='zai92webdev@gmail.com' arrow>
+                            <EmailIcon />                            
+                        </Tooltip>
                     </div>
 
-                    
-                    
-                    
-                    
-                    
+
                 </div>
 
                 <div className='contact__sidebar'>
                     <span>Email : zai92webdev@gmail.com</span>
-                    <span>Github : https://github.com/zai92webdev</span>
+                    <span>Github : <a href="https://github.com/zai92webdev" style={{color:'white'}}>https://github.com/zai92webdev</a> </span>
                 </div>
             </div>
 

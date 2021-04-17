@@ -14,37 +14,49 @@ function Navbar() {
         setToggle(!toggle)
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                handleShow(true);
-            } else handleShow(false)
-        })
-        return () => {
-            window.removeEventListener('scroll')
-        }
-    }, [])
+        useEffect(() => {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    handleShow(true);
+                } else handleShow(false)
+            })
+            return () => {
+                window.removeEventListener('scroll')
+            }
+        }, [])
 
 
     return (
         <div className={`navbar ${show && 'navbar__black'}`} >
             <div className='navbar__container'>
+
             <div className='navbar__logo'>
-                <h1>
-                    <Link activeClass="active" to="videobg" spy={true} smooth={true} offset={-110} duration={500}
+                    <Link activeClass="active" to="home" spy={true} smooth={true} offset={-110} duration={500}
                         style={{textDecoration:'none',cursor:'pointer'}} className='navbar__logo__first'>MY PORTFOLIO </Link>
-                </h1>
             </div>
 
             <div className='navbar__icon'>
-                <IconButton onClick={handler}>
-                    {!toggle ? <MenuIcon /> : <ClearIcon />}
+                <IconButton onClick={handler} >
+                    <MenuIcon />
                 </IconButton>
             </div>
+            <div className={!toggle ? "overlay" : "overlay overlay__active"}></div>
 
-            <div className={!toggle ? "navbar__link" : "navbar__linkToggle"}>
-                <ul>
-                    <Link className='navbar__linkList'
+            <ul className={!toggle ? "navbar__link" : "navbar__link toggleActive"}>
+
+                    <div className='navbar__iconCLose'>
+                        <IconButton onClick={handler} style={{right:'0'}}>
+                            <ClearIcon />
+                        </IconButton>
+                    </div>
+
+
+                    <Link className='navbar__linkList' 
+                        activeClass="active" to="home" spy={true} smooth={true} offset={-340} duration={500}
+                    >
+                        Home
+                    </Link>
+                    <Link className='navbar__linkList' 
                         activeClass="active" to="about" spy={true} smooth={true} offset={-340} duration={500}
                     >
                         About
@@ -59,8 +71,7 @@ function Navbar() {
                     >
                         Contact
                     </Link>
-                </ul>
-            </div>
+            </ul>
             </div>
             
         </div >
